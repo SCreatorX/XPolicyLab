@@ -1,0 +1,33 @@
+policy_name: GroundingPI_QwenPI
+protocol: ws
+host: localhost
+port: null
+bench_name: null
+task_name: null
+ckpt_name: null
+env_cfg_type: null
+seed: null
+action_type: joint
+gpu_id: null
+eval_batch: true
+
+# GroundingPI QwenPI external server
+# The server can be started by setup_eval_policy_server.sh or separately.
+groundingpi_root: /home/admin1/GroundingPI/vla/starvla
+groundingpi_server_host: 127.0.0.1
+groundingpi_server_port: 5694
+groundingpi_server_autostart: false
+groundingpi_python: null
+groundingpi_checkpoint_path: null
+
+# XPL <-> QwenPI data contract
+camera_names: [cam_head, cam_left_wrist, cam_right_wrist]
+image_size: [224, 224]
+include_state: true
+server_returns_normalized: true
+dataset_statistics_path: null
+unnorm_key: null
+state_norm_mode: mean_std
+action_norm_mode: mean_std
+execute_horizon: 16
+allow_dummy_policy: false
